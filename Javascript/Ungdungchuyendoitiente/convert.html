@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Money</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="amount"><b>Amount</b></label></td>
+            <td><label for="fcurrency" ><b>From currency</b></label></td>
+            <td><label for="tcurrency" ><b>To currency</b></label></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="amount" name="amount"></td>
+            <td>
+                <select id="fcurrency">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="tcurrency">
+                    <option>VND</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="converting()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <label> Result : <span id="result"> </span></label>
+
+<script>
+    function converting() {
+        var a = + document.getElementById("amount").value;
+        var b= document.getElementById("fcurrency").value;
+        var c= document.getElementById("tcurrency").value;
+        if(b == c) {
+            document.getElementById("result").textContent = a;
+        }
+        if(b==="VND" && c==="USD") {
+            let giaTri = a / 23000;
+            document.getElementById("result").textContent = giaTri;
+        }
+        if(b=="USD" && c=="VND"){
+            let giaTri = a * 23000;
+            document.getElementById("result").textContent = giaTri;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let diemVatly;
+    let diemHoahoc;
+    let diemSinhhoc;
+    diemVatly = prompt("Nhap diem Vat ly:");
+    diemHoahoc = prompt("Nhap diem Hoa hoc:");
+    diemSinhhoc = prompt("Nhap diem Sinh hoc:");
+    let Vatly = parseInt(diemVatly);
+    let Hoahoc = parseInt(diemHoahoc);
+    let Sinhhoc = parseInt(diemSinhhoc);
+    let tong = Vatly + Hoahoc + Sinhhoc;
+    document.write("Diem tong la:" + tong);
+    let diemtrungbinh = tong / 3;
+    document.write("Diem trung binh la:" + diemtrungbinh);
+</script>
+
+</body>
+</html>

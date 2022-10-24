@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator2</title>
+</head>
+<body>
+<form>
+    <h3><b>Caculator</b></h3>
+    <input type="text" id="nhapso1"/>
+    <input type="text" id="nhapso2"/> <br>
+    <button type="button" onclick="caculate('+')">Addition(+)</button>
+    <button type="button" onclick="caculate('-')">Subtraction(-)</button>
+    <button type="button" onclick="caculate('*')">Multiplication(X)</button>
+    <button type="button" onclick="caculate('/')">Division(/)</button> <br>
+    <label> Result : <span id="result"> </span></label>
+</form>
+</body>
+<script>
+    function caculate(value) {
+        var a =  +document.getElementById("nhapso1").value;
+        var b = +document.getElementById("nhapso2").value;
+        let c;
+       if(value === "+"){
+           c = a + b;
+       }else if( value === "-"){
+           c = a - b;
+       }
+       else if( value === "*"){
+           c = a * b;
+       }
+       else if( value === "/"){
+           c = a / b;
+       }
+        document.getElementById("result").textContent = c;
+
+
+    }
+</script>
+</html>

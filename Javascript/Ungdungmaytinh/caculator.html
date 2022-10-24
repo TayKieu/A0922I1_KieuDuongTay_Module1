@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body> <form>
+<h3><b>Caculator</b></h3>
+<input type="text" id="nhapso1"/>
+<input type="text" id="nhapso2"/> <br>
+<button type="button" onclick="cong()">Addition(+)</button>
+<button type="button" onclick="tru()">Subtraction(-)</button>
+<button type="button" onclick="nhan()">Multiplication(X)</button>
+<button type="button" onclick="chia()">Division(/)</button> <br>
+    <label> Result : <span id="result"> </span></label>
+</form>
+<script>
+    function cong() {
+        var a = + document.getElementById("nhapso1").value;
+        var b = + document.getElementById("nhapso2").value;
+        var c = a + b;
+        document.getElementById("result").textContent = c;
+    }
+    function tru() {
+        var a = + document.getElementById("nhapso1").value;
+        var b = + document.getElementById("nhapso2").value;
+        var c = a - b;
+        document.getElementById("result").textContent = c;
+    }
+    function nhan() {
+        var a = + document.getElementById("nhapso1").value;
+        var b = + document.getElementById("nhapso2").value;
+        var c = a * b;
+        document.getElementById("result").textContent = c;
+    }
+    function chia() {
+        var a = + document.getElementById("nhapso1").value;
+        var b = + document.getElementById("nhapso2").value;
+        var c = a / b;
+        document.getElementById("result").textContent = c;
+    }
+
+</script>
+
+
+
+</body>
+</html>
