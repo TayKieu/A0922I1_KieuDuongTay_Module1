@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<label for="DoC">Nhap do C:</label>
+<input type="text" id="DoC" name="nhapdoC"><br>
+<button type="button" onclick="change()">Change</button><br>
+<label>Do F la: <span id="DoF"></span></label>
+</body>
+<script>
+    function change() {
+        var C = +document.getElementById("DoC").value ;
+        var F = (C*(9/5)) + 32;
+        document.getElementById("DoF").textContent = F;
+
+    }
+</script>
+</html>

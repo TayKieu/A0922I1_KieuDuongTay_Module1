@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<label for="meters">Nhap meters:</label>
+<input type="text" id="meters" name="nhapmet"><br>
+<button type="button" onclick="change()">Change</button><br>
+<label>Feet = <span id="feet"></span></label>
+</body>
+<script>
+    function change() {
+        var m = +document.getElementById("meters").value ;
+        var ft = m * 3.2808;
+        document.getElementById("feet").textContent = ft;
+
+    }
+</script>
+
+</html>

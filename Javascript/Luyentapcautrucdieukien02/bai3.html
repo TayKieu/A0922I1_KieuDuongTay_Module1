@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<label for="a">Nhap canh a:</label>
+<input type="text" id="a" name="canh"><br>
+<button type="button" onclick="caculate()">tinh</button><br>
+<label>Dien tich hinh vuong : <span id="result"></span></label>
+</body>
+<script>
+    function caculate() {
+        var a = +document.getElementById("a").value;
+        var s = a * a;
+        document.getElementById("result").textContent = s;
+    }
+</script>
+</html>
