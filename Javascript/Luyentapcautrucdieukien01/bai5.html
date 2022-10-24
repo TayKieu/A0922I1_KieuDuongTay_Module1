@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+</body>
+<script>
+    var bt = +prompt("Nhap diem bai tap:");
+    var gk = +prompt("Nhap diem giua ky:");
+    var ck = +prompt("Nhap diem cuoi ky:");
+    var hocluc = (bt*0.3) + (gk*0.2) + (ck*0.5);
+    if((hocluc >= 9.0)&&(hocluc <= 10)) {
+        document.write("XUAT SAC");
+    }
+    else if(hocluc >= 8.0) {
+        document.write("GIOI");
+    }
+    else if(hocluc >= 7.0) {
+        document.write("KHA");
+    }
+    else if(hocluc >= 5.0) {
+        document.write("TRUNG BINH");
+    }
+    else if(hocluc >= 4.0) {
+        document.write("YEU");
+    }
+    else{
+        document.write("KEM");
+    }
+
+
+</script>
+</html>

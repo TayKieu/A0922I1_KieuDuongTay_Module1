@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+
+</body>
+<script>
+    var sotien = +prompt("Nhap doanh so ban hang:");
+    var tienhoahong;
+    if((sotien >= 0)&&(sotien < 300000)){
+        tienhoahong = sotien * 0.03;
+    }
+    else if((sotien >= 300000)&&(sotien < 500000)){
+        tienhoahong = sotien * 0.04;
+    }
+    else if(sotien >= 500000){
+        tienhoahong = sotien * 0.06;
+    }
+    document.write("So tien hoa hong nhan duoc :" +tienhoahong)
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<label>Cuoc dien thoai cua ho gia dinh trong 1 ngay:<span id="day"></span></label><br>
+<label>Cuoc dien thoai cua ho gia dinh trong 1 thang:<span id="month"></span></label><br>
+<label>Cuoc dien thoai cua ho gia dinh trong 1 nam:<span id="year"></span></label><br>
+
+</body>
+<script>
+    var socuocgoi = +prompt("Nhap so cuoc goi trong 1 ngay:");
+    var cuoc = socuocgoi * 1650;
+    var cuoc1thang = cuoc * 30;
+    var cuoc1nam = cuoc1thang * 12;
+    document.getElementById("day").textContent = cuoc;
+    document.getElementById("month").textContent = cuoc1thang;
+    document.getElementById("year").textContent = cuoc1nam;
+
+</script>
+</html>
