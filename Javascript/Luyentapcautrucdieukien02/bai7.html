@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai7</title>
+    <title>ptbac2</title>
 </head>
 <body>
-
+<label>Nghiem cua pt la:<span id="nghiem"></span></label>
 </body>
+<script>
+    var a = +prompt("Phuong trinh bac 2 co dang: ax2 + bx + c = 0. Nhap a:");
+    var b = +prompt("Phuong trinh bac 2 co dang: ax2 + bx + c = 0. Nhap b:");
+    var c = +prompt("Phuong trinh bac 2 co dang: ax2 + bx + c = 0. Nhap c:");
+    if(a==0){
+        var x = (-c)/b;
+        document.write("x=" + x);
+    }
+    else
+        var delta = (b*b) - (4*a*c);
+        if(delta==0){
+            var nghiemkep = (-b)/(2*a);
+            document.write("Pt co nghiem kep" +nghiemkep);
+        }
+        else if(delta<0){
+            document.write("Pt vo nghiem");
+        }
+        else {
+            var x1 = (-b-Math.sqrt(delta))/(2*a);
+            var x2 = (-b+Math.sqrt(delta))/(2*a);
+            document.getElementById("nghiem").textContent = x1;
+            document.getElementById("nghiem").textContent = x2;
+        }
+
+</script>
 </html>

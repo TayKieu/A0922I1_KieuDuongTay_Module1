@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai6</title>
+    <title>ptbac1</title>
 </head>
 <body>
 <p>Phuong trinh bac 1 co dang: ax + b = c</p>
 <label>Nghiem cua pt la:<span id="nghiem"></span></label>
 </body>
 <script>
-    var a = +prompt("Nhap a:");
-    var b = +prompt("Nhap b:");
-    var c = +prompt("Nhap c:");
-    var x = (c-b)/a;
+    var a = +prompt("Phuong trinh bac 1 co dang: ax + b = 0. Nhap a:");
+    var b = +prompt("Phuong trinh bac 1 co dang: ax + b = 0. Nhap b:");
+    var x = (-b)/a;
+    if(a==0){
+        if(b!=0) {
+            document.write("VO LY");
+        }
+        else document.write("VO SO NGHIEM")
+    }
+    else
     document.getElementById("nghiem").textContent = x;
 
 </script>
