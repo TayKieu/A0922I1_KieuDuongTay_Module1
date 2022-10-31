@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+function bangcuuchuong() {
+    document.write("<table border=1 width='100%'")
+    for(i=1;i<=9;i++){
+        document.write("<tr>");
+        for(j=2;j<=9;j++){
+            document.write("<td>");
+            document.write(j + "x" + i + "=" + (j*i) );
+            document.write("</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+}
+document.write(bangcuuchuong());
+
+</script>
+</html>

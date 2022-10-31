@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var tienbandau= +prompt("Nhap so tien gui vao");
+    var laisuathangthang= +prompt("Nhap lai suat hang thang");
+    var n = +prompt("Nhap so thang gui tiet kiem");
+    var tiennhanduoc;
+    for(let i=0;i<=n;i++){
+        tiennhanduoc= tienbandau * Math.pow((1+laisuathangthang),n);
+        n++;
+        tienbandau = tiennhanduoc;
+    }
+    document.write("Tien lai sau " +n + "thang la:" +" "+tiennhanduoc);
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var n= +prompt("Nhap so luong cho day fibonancy");
+    var x1 = 0;
+    var x2 = 1;
+    var next;
+    for(var i=1; i<=n; i++){
+        document.write(+x1);
+        next = x1+x2;
+        x1=x2;
+        x2=next;
+    }
+</script>
+</html>
