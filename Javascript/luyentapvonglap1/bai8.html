@@ -2,10 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DOAN XEM</title>
 </head>
 <body>
-
+<button type="button" onclick="play()">Choi</button>
 </body>
+<script>
+    function play() {
+        let x = +prompt("Nhap khoang muon doan tu x toi y. X:");
+        let y = +prompt("Nhap khoang muon doan tu x toi y. Y:");
+        let n = Math.floor(Math.random() * (y - x + 1)) + x;
+
+        let count = 0;
+        while (true) {
+            count++;
+            if (count == 4) {
+                document.write("Ban thua cuoc!");
+                break;
+            }
+            let j = +prompt("Doan di");
+
+            if (j === n) {
+                alert("Chuc mung!")
+                break;
+            } else if (j < n) {
+                alert("be thua")
+            } else if (j > n) {
+                alert("lon hon")
+            }
+        }
+
+
+    }
+</script>
+
 
 </html>
