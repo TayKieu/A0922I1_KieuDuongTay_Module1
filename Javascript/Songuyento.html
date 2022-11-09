@@ -8,19 +8,34 @@
 
 </body>
 <script>
-    var numbers = 20;
-    var count=0;
-    while(count < numbers){
-        for(var n=2;;){
-            for(var i=1;i<=n;i++){
-
-                    document.write(+n);
-                    count++;
-                
-                n++;
-            }
+function songuyento(a) {
+    let count = 0;
+    if(a<0)
+        return 0;
+    for( let i=2; i <Math.sqrt(a);i++){
+        if(a%i === 0){
+            count++;
+        }
+        if(count >0){
+            return 0;
+        }
+        else
+            return 1;
+    }
+    let check = 1;
+    for (let j = 1; ;j++){
+        if(songuyento(i)===1){
+            document.write(+i);
+            check++;
+        }
+        if(check === 20){
+            break;
         }
     }
+
+
+
+}
 
 
 

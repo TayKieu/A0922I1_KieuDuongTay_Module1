@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [];
+    let x = +prompt("Nhap so luong phan tu cho mang");
+    let s = 0;
+    for (let i = 0; i < x; i++) {
+        arr[i] = +prompt();
+        s+=arr[i];
+    }
+    let max = arr[0];
+    for (let j = 1; j < arr.length; j++) {
+        if (arr[j] > max) {
+            max = arr[j];
+        }
+    }
+    let med = s/x;
+    document.write("Gia tri lon nhat cua mang la: "+max +"<br>");
+    document.write("gia tri trung binh "+med);
+</script>
+</html>

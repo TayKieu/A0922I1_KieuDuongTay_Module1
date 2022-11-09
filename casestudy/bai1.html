@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCN</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = +prompt("Nhap chieu dai cua HCN:");
+    let m = +prompt("Nhap chieu rong cua HCN:");
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= m; j++) {
+            if (i === 1 || i === n || j === 1 || j === m) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        }
+        document.write("<br>");
+    }
+
+</script>
+</html>

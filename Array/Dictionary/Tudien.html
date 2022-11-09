@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>[dog]</p>
+<p>[cat]</p>
+<p>[fish]</p>
+<p>[house]</p>
+<p>[computer]</p>
+<input type="text" id="word" placeholder="Nhap vao tu can dich nghia"/><br>
+<button type="button" id="trans" onclick="abc()">Translate</button>
+<br>
+<label id="result"></label>
+</body>
+<script>
+    function abc() {
+        let text = document.getElementById("word").value;
+        let WordInEnglish = ["dog", "cat", "fish", "house", "computer"];
+        let WordInVietnamese = ["concho", "conmeo", "conca", "ngoinha", "maytinh"];
+        let count = 1;
+        for (let i = 0; i < WordInEnglish.length; i++) {
+            if (text === WordInEnglish[i]) {
+                document.getElementById("result").textContent = WordInVietnamese[i];
+                break;
+            }
+            else{
+                count++;
+            }
+        }
+        if(count > WordInEnglish.length){
+            document.getElementById("result").textContent = "Khong tim thay";
+        }
+
+    }
+</script>
+</html>

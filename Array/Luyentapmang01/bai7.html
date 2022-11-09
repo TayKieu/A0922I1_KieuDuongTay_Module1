@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt("Nhap phan tu cho mang");
+    }
+    let V = +prompt("Nhap phan tu muon xoa");
+    for(let j= 0; j<arr.length;j++){
+        if(arr[j]===V){
+            arr.splice(j,1);
+            arr.push(0);
+        }
+    }
+    document.write(arr);
+</script>
+</html>
