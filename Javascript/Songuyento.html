@@ -5,42 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-
 </body>
+</html>
 <script>
-function songuyento(a) {
-    let count = 0;
-    if(a<0)
-        return 0;
-    for( let i=2; i <Math.sqrt(a);i++){
-        if(a%i === 0){
-            count++;
-        }
-        if(count >0){
+    function songuyento(a) {
+        let count = 0;
+        if (a< 2) {
             return 0;
+        } else {
+            for (let i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i === 0) {
+                    count++;
+                }
+            }
+            if (count > 0) {
+                return 0;
+            } else return 1;
         }
-        else
-            return 1;
     }
-    let check = 1;
-    for (let j = 1; ;j++){
-        if(songuyento(i)===1){
-            document.write(+i);
+    let check = 0;
+    for (let i = 2; ; i++) {
+        let ktra = songuyento(i);
+        if (ktra === 1) {
+            document.write(i +"<br>");
             check++;
         }
-        if(check === 20){
+        if (check === 20) {
             break;
         }
     }
-
-
-
-}
-
-
-
-
-
-
 </script>
-</html>

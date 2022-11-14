@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let x = +prompt("Nhap vao kich thuoc mang");
+    let arr = Array(x);
+    let count = 0;
+    for(let i = 0; i<x ; i++){
+        arr[i] = +prompt("Nhap phan tu");
+        if(!isNaN( arr[i])){
+            count++;
+        }
+    }
+    document.write("Co "+count+" ki tu so");
+</script>
+</html>

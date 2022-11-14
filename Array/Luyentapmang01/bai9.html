@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let b = Array(10);
+    let a = Array(10);
+    let c = Array(20);
+    for (let i = 0; i < 10; i++) {
+        a[i] = +prompt("Nhap phan tu cho mang a");
+    }
+    for (let j = 0; j < 10; j++) {
+        a[j] = +prompt("Nhap phan tu cho mang b");
+    }
+    c.concat(b.concat(a))
+    document.write(c)
+</script>
+</html>

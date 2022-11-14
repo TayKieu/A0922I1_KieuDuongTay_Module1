@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="str1" placeholder="Input string 1"><br>
+<input type="text" id="str2" placeholder="Input string 2"><br>
+<button type="button" onclick="compare()">Compare</button><br>
+<label id="result"></label>
+</body>
+<script>
+    function compare() {
+        str1 = document.getElementById("str1").value;
+        str2 = document.getElementById("str2").value;
+        if(!str1.localeCompare(str2)){
+            document.getElementById("result").textContent = "2 chuoi bang nhau";
+        }
+        else{
+            alert("2 chuoi khong bang nhau.Moi nhap lai")
+        }
+    }
+</script>
+</html>

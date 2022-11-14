@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="str" placeholder="Input string "><br>
+<button type="button" onclick="replace()">Replace "-" to "_"</button><br>
+<label id="result"></label>
+</body>
+<script>
+    function replace(){
+    str = document.getElementById("str").value;
+    var newStr = str.replace("-","_");
+    document.getElementById("result").textContent = newStr;
+    }
+</script>
+</html>
