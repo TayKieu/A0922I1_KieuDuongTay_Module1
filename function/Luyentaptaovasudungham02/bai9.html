@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let kt = prompt("Nhap 1 ki tu bat ky: ");
+    let count = 0;
+    let arr = [];
+    let x = +prompt("Nhap so luong phan tu cho mang");
+    for (let i = 1; i <= x; i++) {
+        arr[i] = prompt("Nhap phan tu");
+    }
+
+    function check() {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === kt) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        }
+        return -1;
+    }
+
+    let result = check(arr);
+    alert("So lan xuat hien cua ki tu: " + result);
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [];
+    let x = +prompt("Nhap so luong phan tu cho mang");
+    for (let i = 1; i <= x; i++) {
+        arr[i] = prompt("Nhap phan tu");
+    }
+
+    function reverse(arr) {
+        for (let i = 0; i < arr.length / 2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+        return arr;
+    }
+
+    let result = reverse(arr);
+    document.write(result);
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let x1 = +prompt("Nhap so nguyen thu 1 : ");
+    let x2 = +prompt("Nhap so nguyen thu 2 : ");
+    let x3 = +prompt("Nhap so nguyen thu 3 : ");
+    function Min(a,b,c) {
+        let min = a;
+        if(b < min){
+            min = b;
+        }
+        if(c < min){
+            min = c;
+        }
+        return min;
+    }
+    let result = Min(x1,x2,x3);
+    alert("Gia tri nho nhat la : " + result);
+
+</script>
+</html>

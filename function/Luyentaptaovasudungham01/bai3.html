@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function doSth(Num1,Num2) {
+        if(Num1 > Num2){
+            alert("so thu 1 lon hon so thu 2");
+            return 0;
+        }
+        if(Num1 <= Num2){
+            return Num1 + Num2;
+        }
+    }
+    let x1 = +prompt("Nhap so thu 1");
+    let x2 = +prompt("Nhap so thu 2");
+    let result = doSth(x1,x2);
+    document.write(+result)
+</script>
+</html>

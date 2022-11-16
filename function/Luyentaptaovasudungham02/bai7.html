@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let x1 = +prompt("Nhap vao so nguyen thu 1: ");
+    let x2 = +prompt("Nhap vao so nguyen thu 2: ");
+    function reverse(a,b) {
+             let temp = a;
+             a = b;
+             b = temp;
+             return +a +' '+ +b;
+    }
+    let result = reverse(x1,x2);
+    alert(result);
+</script>
+</html>

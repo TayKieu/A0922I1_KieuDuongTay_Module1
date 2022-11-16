@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function isPrime(a) {
+        let count = 0;
+        if (a< 2) {
+            return 0;
+        } else {
+            for (let i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i === 0) {
+                    count++;
+                }
+            }
+            if (count > 0) {
+                return 0;
+            } else return 1;
+        }
+    }
+    let check = 0;
+    for (let i = 2; ; i++) {
+        let ktra = isPrime(i);
+        if (ktra === 1) {
+            document.write(i +"<br>");
+            check++;
+        }
+        if (check === 10000) {
+            break;
+        }
+    }
+</script>
