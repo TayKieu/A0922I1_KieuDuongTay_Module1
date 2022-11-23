@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Temperature{
+        constructor(celsius) {
+            this.celsius = celsius;
+            this.setCelsius = function (celsius) {
+                if(this.celsius>= -273){
+                    this.celsius = celsius;
+                }
+                return ("Nhiet do ko hop le");
+            }
+            this.getCelsius = function () {
+                return this.celsius;
+            }
+            this.getFahrenheit = function () {
+                return this.celsius * (9/5) + 32;
+            }
+            this.getKenvin = function () {
+                return this.getFahrenheit() -32;
+            }
+        }
+    }
+    let temperature = new Temperature(25);
+    document.write("Do C nhap vao: "+temperature.getCelsius() + "<br>")
+    document.write("Do F tuong ung la: "+temperature.getFahrenheit() + "<br>"+"Do Kelvin tuong ung la: "+temperature.getKenvin())
+</script>
+</html>

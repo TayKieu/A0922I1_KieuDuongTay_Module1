@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCN</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Rectangle{
+        constructor(chieudai,chieurong) {
+            this.chieudai = chieudai;
+            this.chieurong = chieurong;
+            this.setChieuDai = function (chieudai) {
+                this.chieudai = chieudai;
+            }
+            this.getChieuDai = function () {
+                return this.chieudai;
+            }
+            this.setChieuRong = function (chieurong) {
+                this.chieurong = chieurong;
+            }
+            this.getChieuRong = function () {
+                return this.chieurong;
+            }
+            this.tinhChuvi = function () {
+                return (this.chieudai + this.chieurong)*2;
+            }
+            this.tinhDienTich = function () {
+                return this.chieurong * this.chieudai;
+            }
+        }
+    }
+    let rectangle = new Rectangle(5,4);
+    document.write(rectangle.getChieuDai() +','+ rectangle.getChieuRong() +"<br>")
+    document.write("chu vi: "+rectangle.tinhChuvi() + "<br>"+ " Dien tich: "+rectangle.tinhDienTich()+"<br>")
+    rectangle.setChieuDai(8);
+    rectangle.setChieuRong(4);
+    document.write(rectangle.getChieuDai() +','+ rectangle.getChieuRong() +"<br>")
+    document.write("chu vi: "+rectangle.tinhChuvi() + "<br>"+ " Dien tich: "+rectangle.tinhDienTich())
+</script>
+</html>
