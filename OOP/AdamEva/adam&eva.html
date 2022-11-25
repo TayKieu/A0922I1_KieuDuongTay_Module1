@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Adam said" onclick="adamSaid()">
+<input type="button" value="Adam checks the weight of the apple" onclick="adamCheckApple()">
+<input type="button" value="Adam bites a piece of apple" onclick="adamEatApple()">
+<input type="button" value="Adam identificates other person" onclick="adamPersonIdentification()">
+<br><br><br>
+<input type="button" value="Eva said" onclick="evaSaid()">
+<input type="button" value="Eva checks the weight of the apple" onclick="evaCheckApple()">
+<input type="button" value="Eva bites a piece of apple" onclick="evaEatApple()">
+<input type="button" value="Eva identificates other person" onclick="evaPersonIdentification()">
+</body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
+        }
+        setWeight(weight){
+            this.weight = weight;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        isEmpty(){
+            if(this.weight<=0){
+                return false;
+            }
+            else return true;
+        }
+        decrease(){
+            if(this.isEmpty()){
+                this.weight -= 1;
+                alert("the apple's weight after being eaten is: " +this.weight);
+            }
+        }
+    }
+
+    class Human {
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(weight){
+            this.weight = weight;
+        }
+        getGender(){
+            return this.gender;
+        }
+        setGender(gender){
+            this.gender = gender;
+        }
+        eatApple(){
+            this.weight += 1
+        }
+        checkApple(){
+            if(apple.weight <= 0){
+                alert("The apple is finished");
+            }
+            else{
+                alert("the apple's weight is: "+apple.weight);
+            }
+        }
+        say(said){
+            alert("Adam said: " +said);
+        }
+        PersonIdentification(name){
+            alert("name: " + name.name + " | " + "gender: " + name.gender + " | " + "weight: " + name.weight);
+        }
+    }
+    let apple = new Apple(10);
+
+
+                                                //Adam
+    let adam = new Human("Adam","male",80);
+    function adamSaid() {
+        let said = prompt("Input Adam words: ");
+        adam.say(said);
+    }
+    function adamCheckApple() {
+        adam.checkApple();
+    }
+    function adamEatApple() {
+        if(apple.isEmpty()){
+            adam.eatApple();
+            alert("Adam's weight after biting a piece of apple: "+adam.weight);
+            apple.decrease();
+        }
+        else {
+            alert("The apple is empty!");
+        }
+    }
+    function adamPersonIdentification(){
+        let name = prompt("enter a name");
+        if(name == eva.name.toLowerCase() || name == eva.name){
+            adam.PersonIdentification(eva);
+        }
+    }
+
+
+                                                  //EVA
+    let eva = new Human("Eva","female",45);
+    function evaSaid() {
+        let said = prompt("Input Eva words: ");
+        eva.say(said);
+    }
+    function evaCheckApple() {
+        eva.checkApple();
+    }
+    function evaEatApple() {
+        if(apple.isEmpty()){
+            eva.eatApple();
+            alert("Eva's weight after biting a piece of apple: "+eva.weight);
+            apple.decrease();
+        }
+        else {
+            alert("The apple is empty!");
+        }
+    }
+    function evaPersonIdentification(){
+        let name = prompt("enter a name");
+        if(name == adam.name.toLowerCase() || name == adam.name){
+            eva.PersonIdentification(adam);
+        }
+    }
+</script>
+</html>
